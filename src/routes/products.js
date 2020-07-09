@@ -17,9 +17,15 @@ router.get(`${routeName}/:id`, (req, res)=>{
 
 //Cria um produto
 router.post(routeName, (req, res)=>{
-    const teste = req.body
+    // const teste = req.body
+const product ={
+    name: req.body.name,
+    price: req.body.price
+}
+
     res.status(201).json({
-        message: "Vai criar um produto"
+        message: "Vai criar um produto",
+        createdProduct: product
     })
 })
 

@@ -4,7 +4,7 @@ const routeName = '/orders'
 
 //Lista todos os pedidoss
 router.get(routeName, (req, res)=>{
-    res.json([{message: "Vai retornar todos os pedidoss"}])
+    res.json([{message: "Vai retornar todos os pedidos"}])
 })
 
 //Pega os dados de um pedidos
@@ -17,9 +17,15 @@ router.get(`${routeName}/:id`, (req, res)=>{
 
 //Cria um pedido
 router.post(routeName, (req, res)=>{
-    const teste = req.body
+    // const teste = req.body
+    const order ={
+        id_product: req.body.id_product,
+        amount: req.body.amount
+
+    }
     res.status(201).json({
-        message: "Vai criar um pedido"
+        message: "Vai criar um pedido",
+        createdOrder: order
     })
 })
 
