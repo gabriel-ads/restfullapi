@@ -1,5 +1,5 @@
 const knex = require('../../database')
-const products = require('../services/products')
+const moment = require('moment')
 const tableName = 'products'
 
 const getAll = () => knex(tableName)
@@ -17,6 +17,7 @@ const create = (product) => {
 }
 
 const update = (id, product) => {
+    product.updated_at = moment().utc().format()
     return knex(tableName)
         .where({ id: id })
         .update(product)
