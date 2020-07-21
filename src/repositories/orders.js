@@ -16,9 +16,11 @@ const create = async (order) => {
     const [id] = await knex(tableName).insert(order)
     return id
 }
+const update = (id, order) => knex(tableName).where({id:id}).update(order)
 
 module.exports = {
     getAll,
     getById,
     create,
+    update,
 }
