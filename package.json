@@ -8,7 +8,7 @@
     "start": "nodemon ./server.js",
     "migration:create": "knex migrate:make",
     "migration:up": "knex migrate:latest",
-    "migration:rollback": "knex migrate:rollback"
+    "migration:down": "knex migrate:down"
   },
   "keywords": [
     "node"
