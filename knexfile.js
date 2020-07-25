@@ -1,7 +1,5 @@
 // Update with your config settings.
 
-const { on } = require("nodemon");
-
 module.exports = {
 
   development: {
