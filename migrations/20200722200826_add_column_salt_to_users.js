@@ -11,6 +11,6 @@ exports.up = function (knex) {
 
 exports.down = function (knex) {
     return knex.schema.table(tableName, table => {
-        tableName.dropColumn(columnName)
+        table.dropColumn(columnName)
     })
 };
