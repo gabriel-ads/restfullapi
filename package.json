@@ -4,11 +4,11 @@
   "description": "Api usada para praticar restful APIs na aula da arbyte",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Sem testes irmão\"",
+    "test": "jest",
     "start": "nodemon -r dotenv/config server",
     "migration:create": "knex migrate:make",
     "migration:up": "knex migrate:latest",
-    "migration:up:prod":"knex migrate:latest --env production",
+    "migration:up:prod": "knex migrate:latest --env production",
     "migration:down": "knex migrate:down"
   },
   "keywords": [
@@ -21,6 +21,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jest": "^26.1.0",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.1",
     "moment": "^2.27.0",
